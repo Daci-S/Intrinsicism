@@ -1,0 +1,1 @@
+(function(){"use strict";var n=window.matchMedia("(prefers-reduced-motion: reduce)").matches;if(n||typeof window.Lenis>"u")return;var e=new window.Lenis({lerp:.085,wheelMultiplier:1,smoothWheel:!0,syncTouch:!1,touchMultiplier:1});function i(r){e.raf(r),requestAnimationFrame(i)}requestAnimationFrame(i),window.TFI=window.TFI||{},window.TFI.lenis=e})();

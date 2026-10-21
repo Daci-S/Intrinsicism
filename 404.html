@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not here | Intrinsicism</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0A0A0B">
+  <link rel="icon" href="assets/meta/favicon-32.png" type="image/png" sizes="32x32">
+  
+  <link rel="apple-touch-icon" href="assets/meta/touch-icon.png">
+  <!-- 2026-10-20: self-hosted (scripts/selfhost-fonts.cjs) — no third-party origin before first paint -->
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <style>
+    /* The one page of the site nobody is meant to reach (2026-10-05). The site's own voice:
+       the subtitle narrator's line, the emblem, one door back. No script. */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;background:#0A0A0B;color:#F4F3EE}
+    body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(22px,4.5vh,44px);
+      padding:24px;text-align:center;font-family:'Newsreader',Georgia,serif;-webkit-font-smoothing:antialiased}
+    svg{width:118px;height:118px;fill:#fff;animation:spin 12s linear infinite}
+    @keyframes spin{to{transform:rotate(-360deg)}}
+    h1{font-family:'Archivo Black',Impact,sans-serif;font-weight:400;font-size:clamp(2.4rem,9vw,6.4rem);line-height:.9;letter-spacing:-.02em}
+    p{font-style:italic;font-size:clamp(1.05rem,2vw,1.4rem);color:#B9B7B0;max-width:30ch}
+    a{display:inline-flex;align-items:center;min-height:46px;padding:0 1.6em;border-radius:100px;background:#1E40E5;color:#fff;
+      font-family:'Figtree',system-ui,sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+    a:hover,a:focus-visible{background:#fff;color:#1E40E5;outline:none}
+    @media(prefers-reduced-motion:reduce){svg{animation:none}}
+  </style>
+</head>
+<body>
+  <svg viewBox="-100 -100 200 200" aria-hidden="true">
+    <defs><g id="p" font-family="'Archivo Black',Impact,sans-serif">
+      <text x="0" y="-46" text-anchor="middle" dominant-baseline="central" font-size="64" transform="rotate(90 0 -46)">D</text>
+      <text x="0" y="-73" text-anchor="middle" font-size="15" letter-spacing="1">ACI.</text></g></defs>
+    <use href="#p"/><use href="#p" transform="rotate(90)"/><use href="#p" transform="rotate(180)"/><use href="#p" transform="rotate(270)"/>
+  </svg>
+  <h1>404</h1>
+  <p>Hello&hellip; anybody there? Nothing has been revealed at this address.</p>
+  <a href="index.html">Back to the start</a>
+</body>
+</html>

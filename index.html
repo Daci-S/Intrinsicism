@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intrinsicism | Daci Scurtu</title>
+  <meta name="description" content="Intrinsicism — the portfolio of Dacian Scurtu, creative director and web designer in Valencia. A scroll-told narrative about uncovering the value that is already there.">
+  <meta name="author" content="Dacian Scurtu">
+  <meta name="theme-color" content="#0A0A0B">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://daciscurtu.com/">
+  <meta property="og:url" content="https://daciscurtu.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Intrinsicism">
+  <meta property="og:title" content="Intrinsicism | Daci Scurtu">
+  <meta property="og:description" content="A personal portfolio told as a scroll: creative direction and web design by Dacian Scurtu, Valencia.">
+  <meta property="og:image" content="https://daciscurtu.com/assets/meta/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Intrinsicism | Daci Scurtu">
+  <meta name="twitter:description" content="A personal portfolio told as a scroll: creative direction and web design by Dacian Scurtu, Valencia.">
+  <meta name="twitter:image" content="https://daciscurtu.com/assets/meta/og.jpg">
+  <link rel="apple-touch-icon" href="assets/meta/touch-icon.png">
+
+  
+  
+  <script>(function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js');try{
+  /* ⭐⭐ WHEN THE OPENING PLAYS (Daci, 2026-09-27: "when i open the file i dont know if it
+     will start with the dial or in the middle of the black screen … make sure everytime the
+     index file is clicked, the sun dial comes up"). The cause was the 6-hour localStorage
+     "returning visitor" skip (tfi_seen, 2026-09-20): a second double-click inside 6 hours
+     landed on the dive's black emblem screen. It is GONE. The rule now:
+       · OPENING the file / a new tab (empty session)  → the full intro, from the sundial
+       · RELOAD or back/forward past the opening        → that CHAPTER (Manifesto / Projects /
+         About / Contact), under its own curtain, from its start (nav.js resume)
+       · RELOAD while still in the opening              → the full intro again
+       · ?intro=1 forces the intro · ?intro=0 skips it (tools)
+     The browser never restores a scroll position: a mid-pin restore is what "neither" was. */
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  var force=/[?&]intro=1/.test(location.search),skip=/[?&]intro=0/.test(location.search)||/^#work\//.test(location.hash);/* 2026-10-20: a shared project link (#work/<slug>) opens on that project, no intro (tube.js deepLink) */
+  var nav=(performance.getEntriesByType&&performance.getEntriesByType('navigation')[0])||{},nt=nav.type||'navigate';
+  var sec=sessionStorage.getItem('tfi_sec'),played=false;
+  if(force){sessionStorage.removeItem('tfi_intro');}
+  else if(skip){played=true;}
+  else if(nt==='reload'||nt==='back_forward'){played=true;}/* 2026-10-19 (Daci): EVERY reload lands on the turning emblem on black — no resume curtain, no intro replay (nav.js resume() stays dormant) */
+  else{played=sessionStorage.getItem('tfi_intro')==='1';}
+  if(played)sessionStorage.setItem('tfi_intro','1');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!played&&!reduce){d.classList.add('intro-live');}}catch(e){}})();
+  /* ⭐ THE BOOT GATE (2026-09-27). On a first visit, heavy set-up that is NOT the loader
+     (the name's shader + glyph field, the §7 eye's dither, the contour grounds, the cities,
+     the skills case, the About spread) waits here instead of running under the count —
+     measured: 1.5s of it made the count jump 00→41→60. intro.js releases the queue into
+     the HELD BLACK after the collapse, where nothing moves; tasks run one per macrotask.
+     Return visits and reduced motion: nothing is held. Failsafe release at 9s. */
+  window.TFI_BOOT=(function(){var q=[],held=document.documentElement.classList.contains('intro-live');
+    function run(){var f=q.shift();if(!f)return;try{f()}catch(e){try{console.error(e)}catch(_){}}setTimeout(run,0)}
+    function release(){if(!held)return;held=false;setTimeout(run,0)}
+    if(held)setTimeout(release,9000);
+    return{later:function(f){if(held)q.push(f);else f()},release:release,held:function(){return held}}})();</script>
+
+  
+  <link rel="icon" href="assets/meta/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/meta/favicon-16.png" type="image/png" sizes="16x16">
+
+  
+  
+  
+  
+  <script>(function(){if(location.protocol==='file:')return;['archivoblack','archivo'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='assets/fonts/'+f+'-normal-latin.woff2';document.head.appendChild(l);});})();</script>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/intro.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/dive.css">
+  <link rel="stylesheet" href="assets/css/manifesto.css">
+  <link rel="stylesheet" href="assets/css/tube.css">
+  <link rel="stylesheet" href="assets/css/case.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/cities.css">
+  <link rel="stylesheet" href="assets/css/gate.css">
+  <link rel="stylesheet" href="assets/css/eye.css">
+  <link rel="stylesheet" href="assets/css/feel.css">
+  <link rel="stylesheet" href="assets/css/chrome.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <style>
+    /* White canvas shell (docs/09) — sections land here one by one. */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{background:#FFFFFF;color:#0A0A0B}
+    body{font-family:'Inter',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+    main{min-height:100vh}
+    .skip-link{position:absolute;left:-9999px;top:0;background:#0A0A0B;color:#fff;padding:10px 16px;z-index:500;font-size:.85rem}
+    .skip-link:focus{left:12px;top:12px}
+
+    /* nav — emblem only, top right, 2× (Ryan register); appears when the
+       intro hands over. pointer-events pass through except on the link itself. */
+    /* emblem colour, PER-PETAL (2026-07-30, nav.js "petal tone"): the mark is
+       four independent `<use>` petals, and each one now gets its OWN colour
+       every frame from its own measured getBoundingClientRect() against the
+       real dark-section list — so as the mark rotates across a boundary, the
+       petal that has actually crossed onto the dark ground goes white on its
+       own, and the rest follow one by one as they cross too, instead of the
+       whole mark flipping together on a single section-level guess.
+       ⚠ mix-blend-mode:difference was tried first — it's the textbook fix for
+       this — but it rendered inconsistently against this page's real content
+       in verification (blank against the smoke/gatefold/painterly sections in
+       repeated headless passes, for a cause I could not pin down with
+       confidence). Not shipping an unverified GPU-compositing bet on the
+       piece Daci specifically flagged as broken; this JS version is directly
+       measured and checkable via computed style, no compositing ambiguity.
+       CSS below is the no-JS fallback (whole-mark toggle); nav.js overrides
+       per petal via inline style once it runs. */
+    .nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;justify-content:space-between;align-items:flex-start;
+      padding:18px;visibility:hidden;opacity:0;pointer-events:none;
+      transition:opacity .5s cubic-bezier(.22,1,.36,1),visibility 0s .5s}
+
+    /* word index — Archivo 600 caps (the site's label register, docs/09 §3) */
+    /* index sits ~1cm in from the left edge (Daci 2026-07-23); eased down on mobile */
+    .nav__index{list-style:none;display:flex;gap:clamp(13px,2vw,30px);pointer-events:auto;margin-top:9px;
+      margin-left:clamp(16px,2.7vw,37px)}
+    /* pure #FFF / pure #000 at FULL opacity so the index stands out (Daci
+       2026-08-06 — the old opacity:.84 greyed it out on every section). Hover
+       affordance is now a wiping underline (in currentColor), not a dim. */
+    /* ⭐ −7% (Daci, 2026-08-25). .792 → .736; mobile .638 → .593. */
+    /* ⭐ FIGTREE 700, WAS ARCHIVO 600 (Daci, 2026-08-30): "i want the index text to
+       look a bit cleaner and more impactful, currently looks like default claude
+       text. maybe make the letters and words a bit more rounded and like 5-10%
+       thicker too."
+       Chosen by RENDERING the four words in six candidates side by side rather than
+       by picking a name: Archivo 600 and 700, Figtree 700, Outfit 600, Plus Jakarta
+       700, Hanken Grotesk 700. Archivo is a squared grotesque — its O and its C are
+       flat-sided, which is exactly the mechanical feel he is reacting to. Figtree
+       keeps the editorial weight and opens the counters into real curves.
+       ⚠ OUTFIT IS ROUNDER STILL AND WAS REJECTED ON PURPOSE: its perfect-circle
+       geometry is the house style of every startup landing page, which is the
+       generic he asked to get away from. Rounder is not the goal; rounder AND not
+       anonymous is.
+       600 → 700 is about +12% stroke, +4% size, and the tracking pulled in from
+       .14em to .125em because a heavier face needs less air to separate.
+       ⚠ This is a FOURTH family on a deliberately tight system. It earns its place
+       by owning the persistent chrome and nothing else on the page. */
+    .nav__index a{position:relative;font-family:'Figtree','Archivo',system-ui,sans-serif;
+      font-weight:700;font-size:.766rem;
+      letter-spacing:.125em;text-transform:uppercase;text-decoration:none;color:#FFFFFF;opacity:1;
+      text-shadow:0 1px 4px rgba(0,0,0,.34);cursor:pointer}
+    /* ⭐ PIXEL-TIGHT (2026-10-03): no colour transition — every letter switches the frame its
+       ground does (nav.js paintChars). The block .is-dark toggle remains the no-JS fallback. */
+    .nav--chartone .nav__index .nav__ch,.nav--chartone .nav__index a:not(:has(.nav__ch)){color:#FFFFFF;text-shadow:0 0 1px rgba(0,0,0,.45),0 1px 5px rgba(0,0,0,.5)}
+    .nav--chartone .nav__index .is-ink{color:#000000!important;text-shadow:0 1px 5px rgba(255,255,255,.85)!important}
+    .nav__index a::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:1.5px;
+      background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .34s cubic-bezier(.22,1,.36,1)}
+    .nav__index a:hover::after,.nav__index a:focus-visible::after{transform:scaleX(1)}
+    .nav.is-dark .nav__index a{color:#000000;text-shadow:0 1px 5px rgba(255,255,255,.85)}
+    .nav__index a.is-soon{opacity:.38;cursor:default}
+    @media(max-width:720px){.nav__index{gap:11px;margin-top:4px}
+      .nav__index a{font-size:.617rem;letter-spacing:.085em}}
+    .nav.is-visible{visibility:visible;opacity:1;transition:opacity .5s cubic-bezier(.22,1,.36,1)}
+
+    /* =========================================================
+       ⭐⭐ THE DAWN — the index and the emblem are GIVEN LIGHT (2026-08-26)
+       Daci: "i dont like how the dive through the D leads to a pre existing
+       index and logo, it should be a black screen and then i want the index and
+       logo to materialise, like an uneven wave giving light to them, left to
+       right, relatively quick but still visible, giving light to the index and
+       then the logo, doing so before the conditional message ... about 3 secs."
+       The budget is real and it is measured: subs.js `WAITS[0] = 3000`.
+
+       Three parts, and the split matters:
+       ① `.nav--dawn` holds the chrome dark — nav.js adds it at init, so the
+          pre-dark state is in place long before intro.js ever shows the nav.
+       ② ⛔ THERE IS NO VISIBLE WAVE. The first build painted the front as a soft
+          luminous band crossing the strip; Daci, 2026-08-28: "the wave that shows the
+          index and emblem should not be visible, just they should appear kind of in a
+          wave, without seeing the wave itself. So theyre appearance isnt just there
+          already boom, it like comes in a wave." The band and its keyframes are gone.
+          The only trace of the front is the ORDER of arrival and the bloom each
+          letter makes as it lands.
+       ③ each letter and each petal lights as the front reaches ITS x — nav.js
+          writes one `--d` per element, from its measured position + a seeded
+          jitter. The stagger is what makes it a wave and not four fades.
+       ⛔ Every keyframe list here carries the SAME filter functions in the same
+       order. A list that changes shape between keyframes does not interpolate
+       in Chrome — it steps — and the glow would snap instead of bloom.
+       ⚠ The end state of every animation is the element's natural resting state,
+       so `forwards` holding it is harmless if the cleanup never runs. The glow
+       is `drop-shadow` and NOT `text-shadow` on purpose: text-shadow inherits
+       from `.nav__index a`, and a held text-shadow would out-rank the
+       `.nav.is-dark` white shadow and leave the index unreadable on the white
+       sections for the rest of the visit.
+       ========================================================= */
+    /* ⭐⭐ THE EMBLEM AND THE INDEX NO LONGER ARRIVE TOGETHER (Daci, 2026-08-29):
+   "I dont want the index appearing at all during the dive, only once it reaches
+   initial intrinsicism part with the single benidorm photo, then that wave
+   animation happens and it appears, just keep the icon."
+   Two holds and two lights, because they are now two separate events:
+     · the PETALS light at the intro hand-over, as before — the mark is the only
+       chrome the opening carries.
+     · the INDEX holds dark through the whole 6,700px dive and lights on the
+       Benidorm frame, with the same wave.
+   ⚠ Keep them as separate class pairs. One shared `is-dawning` cannot express
+   "petals lit, index still held", which is the entire state the dive lives in. */
+/* ⚠ the hold applies only while a group is NOT being lit (2026-09-27): the dawn no
+   longer HOLDS its end frame (no `both` — that held a no-op filter forever), so a
+   letter that has landed must fall back to visible, not to the hold's opacity:0 while
+   nav.js waits out TOTAL. The delay before each letter is covered by `backwards`. */
+.nav--hold-i:not(.is-lit-i) .nav__ch{opacity:0}
+.nav--hold-p:not(.is-lit-p) .nav__logo use{opacity:0}
+    /* ⚠ THE EMPTY MIDDLE WAS THE BAND’S JOB, AND THE BAND IS GONE. ~800px separate
+       CONTACT from the emblem; at one speed across the real screen that is ~500ms of
+       nothing, which the light used to cross. nav.js compresses that run now — see
+       the MAXGAP note there. Nothing in this file draws the front any more. */
+    /* ⛔⛔ NO FILTERS IN THE DAWN (2026-09-27 — his "every time the index and emblem
+       appear it glitches"). MEASURED at the settled Benidorm frame: hiding .nav took the
+       GPU's compositing from ~190-310ms to 17ms per trace (gpuisolate.mjs). The letters
+       animated `filter:blur() drop-shadow()` — 29 blur passes at once — and `both` then
+       HELD the 100% keyframe's no-op `blur(0) drop-shadow(0 0 0 transparent)` on every
+       letter for the rest of the visit: 29 render passes a frame, forever.
+       ⭐ The same look, painted instead of filtered: a letter starts as its own GLOW
+       (colour transparent, a soft white text-shadow — the classic blur-in), blooms, and
+       settles. 100% is omitted, so it eases into the letter's NATURAL colour and shadow
+       (white or the .is-dark black), and `backwards` holds only the start during the
+       delay — nothing is held after it lands. */
+    .nav.is-lit-i .nav__ch{animation:tfi-dawn-ch .60s cubic-bezier(.22,1,.36,1) backwards;
+      animation-delay:var(--d,0ms)}
+    @keyframes tfi-dawn-ch{
+      0%{opacity:0;color:rgba(255,255,255,0);text-shadow:0 0 7px rgba(255,255,255,.85)}
+      42%{opacity:1;text-shadow:0 0 10px rgba(255,255,255,.95)}}
+    /* the petals: opacity ONLY. Their `transform` is the pinwheel's rotate()
+       attribute and nav.js drives the parent's rotation — writing transform
+       here would fight both. */
+    .nav.is-lit-p .nav__logo use{animation:tfi-dawn-petal .52s cubic-bezier(.22,1,.36,1) backwards;
+      animation-delay:var(--d,0ms)}
+    @keyframes tfi-dawn-petal{0%{opacity:0}100%{opacity:1}}
+    /* the emblem's own bloom rides the LINK — `.nav__logo` already carries a
+       filter and an animation that nav.js overwrites, so it is not free. */
+    /* ⛔ was a 22px drop-shadow on the link, held (no-op) forever after. Now a radial
+       glow BEHIND the mark whose OPACITY blooms — the compositor's cheapest move. */
+    .nav__logo-link{position:relative;z-index:0}
+    .nav__logo-link::before{content:'';position:absolute;inset:-14px;border-radius:50%;pointer-events:none;
+      z-index:-1;background:radial-gradient(closest-side,rgba(255,255,255,.42),rgba(255,255,255,0));opacity:0}
+    .nav.is-lit-p .nav__logo-link::before{animation:tfi-dawn-bloom .78s ease-out backwards;
+      animation-delay:var(--d,0ms)}
+    @keyframes tfi-dawn-bloom{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){
+      /* no wave: nav.js never arms it, and these are belt-and-braces */
+      .nav--hold-i .nav__ch,.nav--hold-p .nav__logo use{opacity:1}}
+    .nav__logo-link{pointer-events:auto;display:block}
+    /* 137px = the original 152 reduced 10% (Daci, 2026-07-21) */
+    /* ⚠ 126px, was 137 (Daci, 2026-08-30): "Reduce rotating emblem size by 5-10%
+       to make it proportional to site and not taking up too much space." −8%, the
+       middle of the range he gave. The 137 was itself the original 152 less 10%
+       (2026-07-21), so the mark has now come down 17% from where it started. */
+    /* ⭐ 118px (Daci, 2026-09-17: "revert the rotating emblem back to its last size and
+       placement… then reduce its size by a further 6%"). 126 × 0.94 = 118.4 → 118, and
+       the corner is the old corner again — the 141px mark aligned to the manifesto's
+       tenth column is reverted, margin and all. At 118px the ink circle is 100px across
+       (0.848 of the half-box, measured with ~/.claude-tools/embink.mjs) and its left
+       edge sits ~66px clear of the statement's measure at 1440, so nothing collides. */
+    /* ⭐⭐ THE EMBLEM TURNS ON THE COMPOSITOR (2026-09-27). nav.js rotates it every frame;
+       with a CSS drop-shadow and no layer of its own that meant re-rasterising the glyphs
+       AND re-blurring them every frame — MEASURED at the settled Benidorm frame, the nav
+       was ~80ms of GPU compositing per trace; with its own layer and the shadow inside
+       the SVG, 21ms (gpuvar.mjs). A legitimate promotion: this element never stops
+       animating, and it is a mark, not a photograph. */
+    .nav__logo{display:block;height:118px;width:118px;fill:#FFFFFF;will-change:transform;
+      animation:embspin 12s linear infinite}   /* no-JS fallback; nav.js takes over (same 12s/rev) */
+    .nav.is-dark .nav__logo{fill:#000000}   /* no-JS fallback only — nav.js overrides per petal */
+    .nav.is-dark .nav__sh{flood-color:#FFFFFF;flood-opacity:.9}
+    .nav__logo use{transition:none}   /* per-petal colour crossfade, set inline by nav.js */
+    @keyframes embspin{to{transform:rotate(-360deg)}}   /* smooth, counter-clockwise */
+    @media(max-width:720px){.nav__logo{height:81px;width:81px}}
+    @media(prefers-reduced-motion:reduce){.nav__logo{animation:none}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+
+  
+  <div class="grid-lines" aria-hidden="true">
+    <div class="grid-lines__inner"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+
+  
+  <div class="tfi-intro" data-intro aria-hidden="true">
+    <canvas class="tfi-intro__canvas"></canvas>
+    <div class="tfi-intro__fallback">DACI SCURTU</div>
+    <div class="tfi-cue" style="opacity:0"><span class="ar">&darr;</span></div>
+    <div class="tfi-flash"></div>
+    <div class="tfi-load">
+      <div class="tfi-load__corner">
+        <div class="tfi-load__num">00</div>
+        <div class="tfi-load__line"><i></i></div>
+      </div>
+    </div>
+    
+    <div class="tfi-tv" aria-hidden="true"><canvas class="tfi-tv__noise"></canvas><span class="tfi-tv__glow"></span></div>
+    <div class="tfi-bulb" aria-hidden="true"></div>
+    
+    <div class="tfi-crt" aria-hidden="true">
+      <span class="tfi-crt__scan"></span>
+      <span class="tfi-crt__phos"></span>
+      <span class="tfi-crt__ab"></span>
+      <span class="tfi-crt__glow"></span>
+      <span class="tfi-crt__vig"></span>
+      <span class="tfi-crt__bezel"></span>
+    </div>
+    
+    <button class="tfi-skip" type="button" data-skip aria-label="Skip intro">Skip <span aria-hidden="true">&rarr;</span></button>
+  </div>
+
+  
+  <nav class="nav" data-nav aria-label="Primary">
+    
+    <ul class="nav__index">
+      <li><a href="#manifesto" data-go="manifesto">Manifesto</a></li>
+      <li><a href="#projects"  data-go="projects">Projects</a></li>
+      <li><a href="#about" data-go="about">About</a></li>
+      <li><a href="#contact"   data-go="contact">Contact</a></li>
+    </ul>
+    <a class="nav__logo-link" href="index.html" aria-label="Intrinsicism — home">
+      <svg class="nav__logo" viewBox="-100 -100 200 200" aria-hidden="true">
+        <defs>
+          <g id="tfi-petal" font-family="'Archivo Black',Impact,sans-serif">
+            <text x="0" y="-46" text-anchor="middle" dominant-baseline="central"
+                  font-size="64" transform="rotate(90 0 -46)">D</text>
+            <text x="0" y="-73" text-anchor="middle" font-size="15" letter-spacing="1">ACI.</text>
+          </g>
+          
+          <filter id="tfi-emb-sh" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+            <feDropShadow class="nav__sh" dx="0" dy="1.7" stdDeviation="3.4" flood-color="#000" flood-opacity=".32"/>
+          </filter>
+        </defs>
+        <g filter="url(#tfi-emb-sh)">
+          <use href="#tfi-petal"/>
+          <use href="#tfi-petal" transform="rotate(90)"/>
+          <use href="#tfi-petal" transform="rotate(180)"/>
+          <use href="#tfi-petal" transform="rotate(270)"/>
+        </g>
+      </svg>
+    </a>
+  </nav>
+
+  
+  <div class="sub" id="sub" aria-live="polite"><p class="sub__l" id="subLine"></p></div>
+
+  <main id="main">
+    <h1 class="sr-only">Daci Scurtu — Intrinsicism</h1>
+
+    
+    
+    <section class="hero" id="stage" aria-label="Selected work">
+      
+      <div class="hero__begin" data-begin aria-hidden="true">Scroll to begin<i>&darr;</i></div>
+      <div class="hero__wall" id="hero-wall"></div>
+      <div class="dz__cam" id="cam" aria-hidden="true"></div>
+      
+      <div class="dz__voice" id="voice" aria-hidden="true"></div>
+      <div class="dz__fog" aria-hidden="true"></div>
+      <div class="hero__band">
+        <span class="hero__word" id="hero-word"><span class="caret"></span></span>
+        
+        <span class="hero__sub">
+          <span class="hero__roll" data-roll>
+            <span class="hero__roll-sz" aria-hidden="true">An immersive experience.</span>
+            <span class="hero__roll-i is-on">A personal portfolio.</span>
+            <span class="hero__roll-i" aria-hidden="true">An immersive experience.</span>
+          </span>
+        </span>
+      </div>
+    </section>
+    
+    <div class="dz" id="dz" aria-hidden="true"></div>
+
+    
+    
+    
+    <section class="mtp" id="manifesto" aria-label="About and work">
+      <h2 class="sr-only">Manifesto</h2>
+      <div class="mtp__shade" aria-hidden="true"></div>
+      <div class="mtp__pin">
+        <div class="manifesto__grid">
+          <figure class="mf-portrait" aria-hidden="true">
+            <span class="mf-ph__box"><img data-ground="map" data-lum="16x28:a999999988876556aa99999988866556aaa9999999866666aaaa999999966566baaaa99999966656baaaaa9999876635b9988887644655353322222222254433221122222224323221222222222211222211222221133333222222233211554401221225964256760122122654546677002222365666777732222224565888772221121366699887222123683149988821158999425a9998249aaaaa566aa99989aaaaaa888aaaaaaaaaaaaa97899999baaaaaaa98444566aa98a99999999976aaa9aaaa9a9aaaa9aa9999a999999999aaa8999999999aaaba99aaaa999a9aaa" data-lum-ar="0.5634" data-ground-clip="parent" data-ground-vis=".mf-portrait" src="assets/img/mf/h-cliff-walk.jpg" alt="" decoding="async"></span>
+          </figure>
+
+          <div class="manifesto__statement">
+            <p class="manifesto__block mf-lead">Intrinsicism&copy; is a testament to the shift from pursuing success to <span class="mf-em">understanding purpose.</span></p>
+            <div class="mf-body">
+              
+              <p class="manifesto__block mf-p2">It is rooted in the belief that every individual possesses an <em class="mf-pre">inherent worth</em> that exists long before recognition or success.</p>
+
+              
+              
+              <p class="manifesto__block mf-p3"><span class="mf-drop">O</span>ur task is not to manufacture value, but to uncover it by understanding the experiences, convictions, and character that define our journey and reveal who we truly are.</p>
+            </div>
+          </div>
+
+          
+          <i class="mf-rule mf-rule--foot" aria-hidden="true"></i>
+
+          
+          <aside class="manifesto__index" aria-label="Details">
+            <dl class="mf-info">
+              <div class="mf-info__r"><dt>Designed and built by</dt><dd>Daci Scurtu</dd></div>
+              <div class="mf-info__r"><dt>Founded</dt><dd>2026</dd></div>
+              <div class="mf-info__r"><dt>Based</dt><dd>Valencia, Spain</dd></div>
+              <div class="mf-info__r"><dt>Practices</dt><dd>Creative direction<br>Brand direction<br>Web design<br>Interactive design</dd></div>
+            </dl>
+            <button type="button" class="idx-about">About</button>
+          </aside>
+        </div>
+        <div class="fly" aria-hidden="true"></div>
+        <h2 class="sr-only">Projects</h2>
+        <div class="tube" id="tube">
+          <div class="drum" id="drum"></div>
+          <div class="tube__now"><span class="tube__now-n"></span><span class="tube__now-c"></span></div>
+          <div class="tube__hint">Drag to look around &mdash; click a project to enter</div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="about" id="about" aria-label="About — Dacian Scurtu">
+
+      
+      <div class="ab-night" aria-hidden="true"></div>
+      
+      <div class="ab-dusk" aria-hidden="true"></div>
+      
+      <header class="ab-open">
+        <div class="ab-spread" data-spread>
+          <div class="ab-spread__stick">
+            <div class="ab-spread__topo" data-topo="ink" aria-hidden="true"></div>
+            <h2 class="ab-open__h ab-spread__h" aria-label="About"><span class="ab-g ab-g--l" aria-hidden="true">AB</span><span class="ab-g ab-g--o" aria-hidden="true">O</span><span class="ab-g ab-g--r" aria-hidden="true">UT</span></h2>
+            <figure data-ground="map" data-lum="16x21:cccccccbbbbbbbbbccccbbaa999aaaaadddcabbbbbbbbbbb9998678889abcccc9888767556889abb89ab988756776678888877775677777777788776667877767778966667777666666777766787776666567655678666667656765345544454775676421113444377667653123554436666775312345565556666521156655433455552014666773334433101456666433443221244556633344443244333454445554333333334" data-lum-ar="0.75" class="ab-open__fig ab-spread__fig">
+              <img src="assets/img/about/daci-benidorm-portrait.jpg" alt="Dacian Scurtu on the balcony walk in Benidorm, Spain" width="1200" height="1600" decoding="async" loading="lazy">
+            </figure>
+            <p class="ab-open__p ab-spread__p ab-spread__p--l">Hey, my name is Dacian Scurtu &mdash; a <span class="ab-it">business student</span>, a <span class="ab-it">footballer</span>, and a <span class="ab-it">creative director</span> specialising in web design, currently based in Valencia, Spain.</p>
+            
+            <p class="ab-open__p ab-open__p--2 ab-spread__p ab-spread__p--r">Intrinsicism began as an attempt to build a portfolio and showcase my newfound passion for creative direction and immersive experiences in all sorts of modes and contexts. However, it quickly became far more personal: an exploration of identity, purpose, and the experiences that shaped who I am.</p>
+          </div>
+        </div>
+
+        
+        <div class="ab-fold">
+          
+          <svg class="ab-steps" aria-hidden="true" focusable="false">
+            <defs>
+              <g id="ab-foot"><ellipse cx="0" cy="-4.3" rx="3.7" ry="6"/><ellipse cx=".4" cy="6.5" rx="2.8" ry="3.5"/></g>
+            </defs>
+            <g class="ab-steps__g"></g>
+          </svg>
+          <i class="ab-spine ab-spine--1" aria-hidden="true"></i>
+          <div class="ab-pivot ab-fold__c">
+            <p class="ab-pivot__lead">Since I am very much in the process of starting my professional career, I couldn&rsquo;t just compile a collection of <span class="ab-it">projects</span> or <span class="ab-it">testimonials</span>.</p>
+          </div>
+          <i class="ab-spine ab-spine--2" aria-hidden="true"></i>
+          
+          <div class="ab-fold__pages">
+            <p class="ab-open__p ab-pivot__p ab-fold__r ab-fold__ins">Instead, I built a visual narrative that represents the path to understanding intrinsic value and purpose, in the hope of attracting partnerships and guidance from those who relate, or who see the value in what I have to offer.</p>
+          </div>
+          
+        </div>
+      </header>
+
+      
+
+
+      
+
+      
+      <section class="ab-comp ab-led" data-topo="ink" aria-label="The components">
+        
+        
+        <p class="ab-comp__lead ab-stmt" data-stmt>My portfolio mirrors my own journey &mdash; the <em>key components</em> of my life down to the simple details, and the impact they have had on shaping me as a character, regardless of how unrelated to each other they may seem.</p>
+
+        <ol class="ab-led__rows">
+          <li class="ab-led__row" data-led>
+            <span class="ab-led__no" aria-hidden="true">01</span>
+            <h3 class="ab-led__w">Football</h3>
+            <figure data-ground="map" data-lum="16x9:222112123222222222221123444443233334433335444223233443333444312334444435444331132234223543433223233422333343334244555443345535443445554545444443" data-lum-ar="1.7778" class="ab-led__fig"><img class="ab-led__bw" src="assets/img/about/cmp-football-bw.jpg" width="1600" height="900" alt="Daci celebrating a goal with a teammate" decoding="async" loading="lazy"><img class="ab-led__col" src="assets/img/about/cmp-football.jpg" width="1600" height="900" alt="" aria-hidden="true" decoding="async" loading="lazy"></figure>
+            <p class="ab-led__p">Football taught me resilience and composure under pressure.</p>
+          </li>
+          <li class="ab-led__row" data-led>
+            <span class="ab-led__no" aria-hidden="true">02</span>
+            <h3 class="ab-led__w">Business</h3>
+            <figure data-ground="map" data-lum="16x9:ffffffffffffffffffa67deffffffffffe5741459dfffffffa26744884786effff8238c842234bfffffc8334211223bfffffff92364324efffffffedfffeddfffffeeeeeeeeeeeef" data-lum-ar="1.7778" class="ab-led__fig"><img class="ab-led__bw" src="assets/img/about/cmp-business-bw.jpg" width="1600" height="900" alt="A leather belt from ONPOINT, the label Daci founded" decoding="async" loading="lazy"><img class="ab-led__col" src="assets/img/about/cmp-business.jpg" width="1600" height="900" alt="" aria-hidden="true" decoding="async" loading="lazy"></figure>
+            <p class="ab-led__p">Business introduced me to strategy, opportunity and the way ideas become reality.<span class="ab-led__disc"><span class="sr-only">Languages: </span>English &middot; Spanish &middot; Romanian</span></p>
+          </li>
+          <li class="ab-led__row" data-led>
+            <span class="ab-led__no" aria-hidden="true">03</span>
+            <h3 class="ab-led__w">Creative<br>direction</h3>
+            <figure data-ground="map" data-lum="16x9:111100000000000011111100000000001341234434300000155323222320000025432200111000002553222122100000255322212110000012222221111110001222222111000110" data-lum-ar="1.7778" class="ab-led__fig"><img class="ab-led__bw" src="assets/img/about/cmp-creative-bw.jpg" width="1600" height="900" alt="Clerestory, one of the sites Daci designed and built" decoding="async" loading="lazy"><img class="ab-led__col" src="assets/img/about/cmp-creative.jpg" width="1600" height="900" alt="" aria-hidden="true" decoding="async" loading="lazy"></figure>
+            <p class="ab-led__p">Creative direction and web design became the language through which those experiences could be expressed.<span class="ab-led__disc"><span class="sr-only">Disciplines: </span>Art direction &middot; UX / UI design &middot; Web design &middot; Motion &amp; interaction &middot; Front-end build</span></p>
+          </li>
+        </ol>
+      </section>
+
+      
+      <section class="ab-move" data-topo="ink" aria-label="The movement">
+        
+        <p class="ab-move__p ab-route" data-route><span class="mv-s mv-s--a" data-mv>Moving between living in</span> <span class="mv-w" data-mv data-flap="SPAIN" style="--k:0">Spain,</span> <span class="mv-w" data-mv data-flap="ENGLAND" style="--k:1">England</span> <span class="mv-w" data-mv data-flap="AUSTRALIA" style="--k:2">and Australia</span> <span class="mv-s mv-s--b" data-mv>exposed me to different cultures, perspectives and ways of thinking, each becoming another layer of the identity I continue to uncover.</span></p>
+      </section>
+
+
+      
+      <section class="cities" id="cty-stage" aria-label="The four cities">
+        <div class="cities__sticky">
+          <canvas id="cty-cv"></canvas>
+          <div class="cities__vig" aria-hidden="true"></div>
+          <div class="cities__grain" aria-hidden="true"></div>
+          <div class="cities__ui">
+            <div class="cities__top">
+              
+              <div class="cities__idx" id="cty-idx"></div>
+            </div>
+            <div class="cities__btm">
+              <div class="cities__place">
+                <h3 class="cities__name" id="cty-name">Zaragoza</h3>
+                <p class="cities__ctry" id="cty-ctry">Spain</p>
+                <div class="cities__tele">
+                  <span id="cty-coord"></span>
+                  <span><i>Local</i> <span id="cty-time"></span></span>
+                  <span id="cty-wx"></span>
+                </div>
+                <div class="cities__day" aria-hidden="true"><i id="cty-day"></i></div>
+              </div>
+              <p class="cities__say" id="cty-say"></p>
+            </div>
+          </div>
+          <div class="cities__boot" id="cty-boot">Engraving the cities&hellip;</div>
+        </div>
+      </section>
+
+
+      
+
+      
+      
+
+      
+    </section>
+
+    
+    <section class="gate" id="football" aria-label="The question, and the goal">
+      
+      <div class="gate__night" aria-hidden="true"></div>
+      <div class="gate__pin">
+        <div class="gate__frame">
+          
+          <video class="gate__vid" muted loop playsinline preload="metadata"
+                 poster="assets/img/football-poster.jpg">
+            <source src="assets/video/football.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <div class="gate__shade" aria-hidden="true"></div>
+        
+        <div class="gate__ask">
+          <p class="gate__lead">Whether I&rsquo;m designing for a business, collaborating with a team or meeting someone for the first time, I approach every project with the same question:</p>
+          
+          <p class="gate__q" aria-label="What already exists here that hasn&rsquo;t yet been revealed?"><span class="gq gq--a" aria-hidden="true"><span class="gq-r"><span>What already</span></span><span class="gq-r gq-r--2"><span>exists here</span></span></span><span class="gq gq--b" aria-hidden="true"><span>that hasn&rsquo;t yet been <span class="bl">revealed?</span></span></span></p>
+        </div>
+        
+        <h2 class="gate__title" aria-label="An identity, an idea and a goal, brought to life by its creative expression">
+          <span class="gate__row gate__row--a" aria-hidden="true"><span class="gate__ph"><span>An identity,</span></span> <span class="gate__ph"><span>an idea</span></span> <span class="gate__ph"><span>and a goal</span></span></span>
+          <span class="gate__row gate__row--b" aria-hidden="true"><span class="gate__ph"><span>brought to life by its creative expression</span></span></span>
+        </h2>
+      </div>
+    </section>
+
+    
+    <section class="eye" id="aperture" aria-label="Do you have a vision?">
+      
+      <div class="eye__day" aria-hidden="true"></div>
+      <div class="eye__pin">
+        <h2 class="eye__title" data-feel="lines" data-feel-when="open">Do you have a vision?</h2>
+
+        <div class="eye__stage">
+          
+          <svg class="eye__mark" viewBox="-100 -100 200 200" aria-hidden="true">
+            <defs>
+              <g id="eye-petal" font-family="'Archivo Black',Impact,sans-serif">
+                <text x="0" y="-46" text-anchor="middle" dominant-baseline="central"
+                      font-size="64" transform="rotate(90 0 -46)">D</text>
+                <text x="0" y="-73" text-anchor="middle" font-size="15" letter-spacing="1">ACI.</text>
+              </g>
+            </defs>
+            <g class="eye__blades">
+              <use class="eye__petal" style="--i:0" href="#eye-petal"/>
+              <use class="eye__petal" style="--i:1" href="#eye-petal"/>
+              <use class="eye__petal" style="--i:2" href="#eye-petal"/>
+              <use class="eye__petal" style="--i:3" href="#eye-petal"/>
+            </g>
+          </svg>
+
+          
+          <div class="eye__eye" data-eye>
+            <svg class="eye__svg" viewBox="0 0 1000 480" aria-hidden="true"
+                 preserveAspectRatio="xMidYMid meet">
+              <defs>
+                
+                <clipPath id="eyeAlmond">
+                  <path d="M 50 236 C 150 140, 340 90, 540 90 C 720 90, 880 160, 950 254
+                           C 900 350, 660 398, 430 398 C 260 398, 110 320, 50 236 Z"/>
+                </clipPath>
+                
+                <radialGradient id="eyeSclera" gradientUnits="userSpaceOnUse"
+                                cx="470" cy="250" r="470">
+                  <stop offset="0%"   stop-color="#FDFAF6"/>
+                  <stop offset="42%"  stop-color="#F7F1E8"/>
+                  <stop offset="72%"  stop-color="#EADFD0"/>
+                  <stop offset="100%" stop-color="#CBB79F"/>
+                </radialGradient>
+                
+                <radialGradient id="eyeBallShade" gradientUnits="userSpaceOnUse"
+                                cx="500" cy="230" r="450">
+                  <stop offset="0%"   stop-color="#4A3826" stop-opacity="0"/>
+                  <stop offset="50%"  stop-color="#4A3826" stop-opacity="0"/>
+                  <stop offset="78%"  stop-color="#43331F" stop-opacity=".22"/>
+                  <stop offset="100%" stop-color="#2A1E12" stop-opacity=".55"/>
+                </radialGradient>
+                
+                
+                <radialGradient id="eyeIris" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%"   stop-color="#1F1005"/>
+                  <stop offset="13%"  stop-color="#54300F"/>
+                  <stop offset="25%"  stop-color="#A06A22"/>
+                  <stop offset="34%"  stop-color="#CD9539"/>
+                  <stop offset="47%"  stop-color="#A26A2C"/>
+                  <stop offset="64%"  stop-color="#8A5827"/>
+                  <stop offset="80%"  stop-color="#6F4420"/>
+                  <stop offset="93%"  stop-color="#4C2D14"/>
+                  <stop offset="100%" stop-color="#2A1809"/>
+                </radialGradient>
+                
+                <radialGradient id="eyeCollar" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%"   stop-color="#F0BC63" stop-opacity="0"/>
+                  <stop offset="66%"  stop-color="#F0BC63" stop-opacity=".5"/>
+                  <stop offset="100%" stop-color="#F0BC63" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="eyeLidShade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stop-color="#221708" stop-opacity=".62"/>
+                  <stop offset="22%"  stop-color="#221708" stop-opacity=".30"/>
+                  <stop offset="52%"  stop-color="#221708" stop-opacity=".05"/>
+                  <stop offset="100%" stop-color="#221708" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="eyeLashFade" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%"   stop-color="#160F07" stop-opacity=".3"/>
+                  <stop offset="20%"  stop-color="#160F07" stop-opacity=".96"/>
+                  <stop offset="70%"  stop-color="#160F07" stop-opacity=".96"/>
+                  <stop offset="100%" stop-color="#160F07" stop-opacity=".22"/>
+                </linearGradient>
+                <filter id="eyeSoft" x="-45%" y="-45%" width="190%" height="190%">
+                  <feGaussianBlur stdDeviation="6"/>
+                </filter>
+                <filter id="eyeSofter" x="-55%" y="-55%" width="210%" height="210%">
+                  <feGaussianBlur stdDeviation="13"/>
+                </filter>
+                <filter id="eyeSoftest" x="-70%" y="-70%" width="240%" height="240%">
+                  <feGaussianBlur stdDeviation="24"/>
+                </filter>
+              </defs>
+
+              <g clip-path="url(#eyeAlmond)">
+                <rect x="0" y="0" width="1000" height="480" fill="url(#eyeSclera)"/>
+
+                
+                <g class="eye__veins" fill="none" stroke="#B0655C" stroke-linecap="round">
+                  <path d="M 62 240 C 118 228, 158 250, 200 240" stroke-width="2.6" opacity=".24"/>
+                  <path d="M 70 262 C 124 272, 148 288, 186 292" stroke-width="1.8" opacity=".16"/>
+                  <path d="M 66 218 C 114 200, 138 192, 172 196" stroke-width="1.5" opacity=".13"/>
+                  <path d="M 940 254 C 884 244, 852 266, 812 256" stroke-width="2.8" opacity=".26"/>
+                  <path d="M 934 280 C 880 292, 856 306, 824 312" stroke-width="2" opacity=".19"/>
+                  <path d="M 930 226 C 886 214, 858 206, 828 212" stroke-width="1.7" opacity=".16"/>
+                </g>
+
+                
+                <g class="eye__ball">
+                  <rect x="-900" y="-700" width="2800" height="1900" fill="url(#eyeBallShade)"/>
+                  <circle class="eye__iris" cx="500" cy="230" r="180" fill="url(#eyeIris)"/>
+                  <g class="eye__fibres" clip-path="url(#eyeIrisClip)"></g>
+                  <g class="eye__crypts" clip-path="url(#eyeIrisClip)"></g>
+                  <circle cx="500" cy="230" r="92" fill="url(#eyeCollar)"/>
+                  
+                  <circle cx="500" cy="230" r="174" fill="none" stroke="#0E0A05"
+                          stroke-width="11" opacity=".28" filter="url(#eyeSoft)"/>
+                  <circle cx="500" cy="230" r="178" fill="none" stroke="#140D07"
+                          stroke-width="3" opacity=".7"/>
+                  <circle cx="500" cy="230" r="171" fill="none" stroke="#33477F"
+                          stroke-width="6" opacity=".24" filter="url(#eyeSoft)"/>
+                  <circle class="eye__pupil" cx="500" cy="230" r="58" fill="#0A0603"/>
+                  <circle class="eye__pupil-soft" cx="500" cy="230" r="62" fill="none"
+                          stroke="#0A0603" stroke-width="9" opacity=".5" filter="url(#eyeSoft)"/>
+                </g>
+
+                
+                <g class="eye__gloss">
+                  <ellipse cx="424" cy="140" rx="60" ry="42" fill="#FFFFFF"
+                           opacity=".72" filter="url(#eyeSoft)" transform="rotate(-16 424 140)"/>
+                  <ellipse cx="404" cy="126" rx="21" ry="14" fill="#FFFFFF"
+                           opacity=".9" transform="rotate(-16 404 126)"/>
+                  <ellipse cx="596" cy="182" rx="19" ry="13" fill="#FFFFFF" opacity=".4"
+                           filter="url(#eyeSoft)"/>
+                  <ellipse cx="510" cy="120" rx="230" ry="44" fill="#FFFFFF" opacity=".11"
+                           filter="url(#eyeSoftest)"/>
+                  
+                  <ellipse cx="520" cy="370" rx="190" ry="34" fill="#FFE6C4" opacity=".2"
+                           filter="url(#eyeSoftest)"/>
+                </g>
+
+                <rect x="0" y="0" width="1000" height="480" fill="url(#eyeLidShade)"/>
+                <ellipse cx="66" cy="240" rx="82" ry="66" fill="#6B5744" opacity=".3"
+                         filter="url(#eyeSofter)"/>
+                <ellipse cx="948" cy="258" rx="76" ry="62" fill="#6B5744" opacity=".26"
+                         filter="url(#eyeSofter)"/>
+
+                
+                <g class="eye__caruncle">
+                  <ellipse cx="908" cy="256" rx="30" ry="24" fill="#D89A92" opacity=".85"
+                           filter="url(#eyeSoft)"/>
+                  <ellipse cx="902" cy="252" rx="17" ry="13" fill="#E9B6AC" opacity=".8"/>
+                  <path d="M 872 232 C 884 250, 884 268, 870 286" fill="none"
+                        stroke="#EFE2D4" stroke-width="9" opacity=".7" filter="url(#eyeSoft)"/>
+                </g>
+
+                
+                <path class="eye__tearline" fill="none" d="M 928 262
+                      C 880 344, 660 392, 434 392 C 268 392, 118 318, 58 238"/>
+
+                
+                <g class="eye__lidbot">
+                  <path class="eye__lid" d="M -80 900 H 1080 V 254 H 950
+                        C 900 350, 660 398, 430 398 C 260 398, 110 320, 50 236 H -80 Z"/>
+                  <path class="eye__lashbot" fill="none" d="M 950 254
+                        C 900 350, 660 398, 430 398 C 260 398, 110 320, 50 236"/>
+                </g>
+                <g class="eye__lidtop">
+                  <path class="eye__lid" d="M -80 -500 H 1080 V 254 H 950
+                        C 880 160, 720 90, 540 90 C 340 90, 150 140, 50 236 H -80 Z"/>
+                  
+                  <path class="eye__lashsoft" fill="none" d="M 950 254
+                        C 880 160, 720 90, 540 90 C 340 90, 150 140, 50 236"/>
+                  <path class="eye__lash" id="eyeLidTopPath" fill="none" d="M 950 254
+                        C 880 160, 720 90, 540 90 C 340 90, 150 140, 50 236"/>
+                </g>
+              </g>
+
+              
+              <g class="eye__lashes"></g>
+              <g class="eye__lashesbot"></g>
+
+              
+              <path class="eye__crease" fill="none" d="M 150 168 C 250 92, 396 44, 552 46
+                    C 716 48, 850 106, 918 176"/>
+              <path class="eye__underline" fill="none" d="M 214 300 C 300 366, 420 402, 552 398
+                    C 668 394, 776 348, 846 288"/>
+            </svg>
+          </div>
+
+          
+        </div>
+
+        <div class="eye__foot">
+          <p class="eye__sub">We&rsquo;ll unlock it.</p>
+          <a class="eye__cta" href="#contact" data-field><span class="eye__cta-t">Let&rsquo;s get to work</span> <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        
+        <footer class="eye__facts" id="contact" aria-label="Contact">
+          <div class="eye__fact eye__fact--l" data-fact>
+            <span class="eye__lbl">Availability</span>
+            <p class="eye__txt">Open to internships, freelance projects, mentorship and collaborations with agencies, studios or brands.</p>
+            <span class="eye__lbl">Who I work with</span>
+            <p class="eye__txt">Young and upcoming brands, businesses, athletes, entrepreneurs, models and personalities, showcasing their work and their talents.</p>
+          </div>
+          <div class="eye__fact eye__fact--r" data-fact>
+            <span class="eye__lbl">Contact</span>
+            <a class="eye__mail" href="mailto:dacianscurtu29@gmail.com">dacianscurtu29@gmail.com</a>
+            <div class="eye__social" aria-label="Social links">
+              <a class="eye__ico" href="https://www.instagram.com/daciscurtu" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a class="eye__ico" href="https://www.linkedin.com/in/dacian-scurtu" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true" style="fill:currentColor;stroke:none"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+              </a>
+              <a class="eye__ico" href="#contact" data-contact aria-label="Write to me">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.4"/><path d="M3 6.5l9 6 9-6"/></svg>
+              </a>
+            </div>
+            
+            <p class="eye__txt eye__txt--open">Feel free to reach out for any site feedback or general connection.</p>
+          </div>
+          <div class="eye__base">
+            <span>&copy; 2026 Dacian Scurtu</span>
+            <span class="eye__where">Valencia, Spain &middot; <time data-clock>--:--</time></span>
+            <a class="eye__top" href="#top" data-totop>Back to the start <span aria-hidden="true">&uarr;</span></a>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <div class="xload" data-xload aria-hidden="true">
+    <span class="xload__word"><span class="xload__word-in"></span></span>
+    <svg class="xload__mark" viewBox="-100 -100 200 200" aria-hidden="true">
+      <defs>
+        <g id="xload-petal" font-family="'Archivo Black',Impact,sans-serif">
+          <text x="0" y="-46" text-anchor="middle" dominant-baseline="central"
+                font-size="64" transform="rotate(90 0 -46)">D</text>
+          <text x="0" y="-73" text-anchor="middle" font-size="15" letter-spacing="1">ACI.</text>
+        </g>
+      </defs>
+      <use href="#xload-petal"/>
+      <use href="#xload-petal" transform="rotate(90)"/>
+      <use href="#xload-petal" transform="rotate(180)"/>
+      <use href="#xload-petal" transform="rotate(270)"/>
+    </svg>
+  </div>
+
+  
+  <div class="cx" data-cx role="dialog" aria-modal="true" aria-labelledby="cx-title" hidden>
+    <div class="cx__veil" data-cx-close></div>
+    <div class="cx__card" data-lenis-prevent>
+      <button class="cx__x" type="button" data-cx-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+      <div class="cx__perch" aria-hidden="true"></div>
+      <div class="cx__body">
+        <p class="cx__kick">What&rsquo;s up?</p>
+        <h2 class="cx__title" id="cx-title">Let&rsquo;s connect.</h2>
+        <form class="cx__form" action="https://formspree.io/f/mzdjbvpp" method="POST" novalidate>
+          <div class="cx__row">
+            <label class="cx__f"><span class="cx__l">Name</span><input name="name" type="text" autocomplete="name" maxlength="120"></label>
+            <label class="cx__f"><span class="cx__l">Email</span><input name="email" type="email" autocomplete="email" required maxlength="160"></label>
+          </div>
+          <fieldset class="cx__chips">
+            <legend class="cx__l">It&rsquo;s about</legend>
+            <label><input type="radio" name="about" value="A project" checked><span>A project</span></label>
+            <label><input type="radio" name="about" value="A role"><span>A role</span></label>
+            <label><input type="radio" name="about" value="A collaboration"><span>A collaboration</span></label>
+            <label><input type="radio" name="about" value="Site feedback"><span>Site feedback</span></label>
+          </fieldset>
+          <label class="cx__f cx__f--msg"><span class="cx__l">Message</span><textarea name="message" rows="3" required maxlength="4000"></textarea></label>
+          <input type="hidden" name="_subject" value="Intrinsicism — a new message">
+          <label class="cx__hp" aria-hidden="true">Leave empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          <div class="cx__foot">
+            <button class="cx__send" type="submit"><span class="cx__send-w">Send it</span> <span aria-hidden="true">&rarr;</span></button>
+            <p class="cx__alt">or write to <a href="mailto:dacianscurtu29@gmail.com">dacianscurtu29@gmail.com</a></p>
+          </div>
+          <p class="cx__status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="cx__done" hidden>
+          <p class="cx__done-t">Received.</p>
+          <p class="cx__done-p">Thank you &mdash; I&rsquo;ll be in touch soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="case" id="case" aria-hidden="true" data-lenis-prevent>
+    <div class="case__top"><span class="case__folio"></span><button class="case__x" type="button" aria-label="Close project">Close &times;</button></div>
+    <section class="case__hero" aria-label="Project title">
+      <div class="case__hero-mid">
+        <span class="case__chapter"></span>
+        <h2 class="case__title"><span class="case__title-base"></span></h2>
+        <p class="case__line"></p>
+      </div>
+      <div class="case__hero-foot">
+        <div class="case__stamp"></div>
+        <span class="case__cue" aria-hidden="true">Scroll</span>
+      </div>
+    </section>
+    <section class="case__film" aria-label="Walkthrough">
+      <span class="case__film-cap"></span>
+      <div class="case__film-vid"></div>
+    </section>
+    <div class="case__read">
+      <div class="case__read-l">
+        <p class="case__build"></p>
+      </div>
+      <div class="case__read-r">
+        <div class="case__meta"></div>
+        <a class="case__live" target="_blank" rel="noopener">Visit live site &nearr;</a>
+      </div>
+    </div>
+    <section class="case__id" aria-label="Brand identity"></section>
+    <section class="case__camp" aria-label="Campaign"></section>
+    <div class="case__strip"></div>
+    <div class="case__end"></div>
+  </div>
+
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script defer src="assets/js/lenis.init.js"></script>
+  <script defer src="assets/js/lite.js"></script>
+  
+  <script defer src="assets/js/warm.js"></script>
+  <script defer src="assets/js/intro.js"></script>
+  <script defer src="assets/js/loadermark.js"></script>
+  
+  <script defer src="assets/js/crt.js"></script>
+  <script defer src="assets/js/begincue.js"></script>
+  
+  <script defer src="assets/js/hero.js"></script>
+  <script defer src="assets/js/dive.js"></script>
+  
+  <script defer src="assets/js/dandelion.js"></script>
+  <script defer src="assets/js/subs.js"></script>
+  
+  <script defer src="assets/js/nav.js"></script>
+  
+  <script defer src="assets/js/transition.js"></script>
+  
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="assets/js/casedata.js"></script>
+  <script defer src="assets/js/caseview.js"></script>
+  
+  <script defer src="assets/js/mfswash.js"></script>
+  <script defer src="assets/js/casegrain.js"></script>
+  <script defer src="assets/js/tube.js"></script>
+  
+  <script defer src="assets/js/manifesto.js"></script>
+  
+  <script defer src="assets/js/gate.js"></script>
+  
+  <script defer src="assets/js/eye.js"></script>
+  <script defer src="assets/js/eyedither.js"></script>
+  
+  <script defer src="assets/js/about.js"></script>
+  <script defer src="assets/js/spread.js"></script>
+  <script defer src="assets/js/night.js"></script>
+  <script defer src="assets/js/flapboard.js"></script>
+  <script defer src="assets/js/mid.js"></script>
+  
+  
+  <script defer src="assets/js/eyefoot.js"></script>
+  <script defer src="assets/js/pillfield.js"></script>
+  <script defer src="assets/js/dove.js"></script>
+  <script defer src="assets/js/contact.js"></script>
+  
+  <script defer src="assets/js/cities.js"></script>
+  
+  <script defer src="assets/js/topo.js"></script>
+  
+  
+  <script defer src="assets/js/feel.js"></script>
+  
+  
+</body>
+</html>
