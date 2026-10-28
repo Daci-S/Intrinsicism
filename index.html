@@ -25,6 +25,12 @@
 
   
   
+  
+  <style>html.tfi-boot body,html.tfi-boot .hero{background:#000!important}
+  html.tfi-boot .hero__wall,html.tfi-boot .hero__word,html.tfi-boot .hero__sub,html.tfi-boot .hero__begin,html.tfi-boot .nav{visibility:hidden!important}
+  .hero__word .caret{display:none!important}</style>
+  <script>(function(){var d=document.documentElement;d.classList.add('tfi-boot');function go(){d.classList.remove('tfi-boot');}
+  document.addEventListener('DOMContentLoaded',go);setTimeout(go,5000);})();</script>
   <script>(function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js');try{
   /* ⭐⭐ WHEN THE OPENING PLAYS (Daci, 2026-09-27: "when i open the file i dont know if it
      will start with the dial or in the middle of the black screen … make sure everytime the
@@ -150,7 +156,8 @@
        ground does (nav.js paintChars). The block .is-dark toggle remains the no-JS fallback. */
     .nav--chartone .nav__index .nav__ch,.nav--chartone .nav__index a:not(:has(.nav__ch)){color:#FFFFFF;text-shadow:0 0 1px rgba(0,0,0,.45),0 1px 5px rgba(0,0,0,.5)}
     .nav--chartone .nav__index .is-ink{color:#000000!important;text-shadow:0 1px 5px rgba(255,255,255,.85)!important}
-    .nav__index a::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:1.5px;
+    /* 2026-10-26: a WHOLE-PIXEL line (was 1.5px at -3px). A fraction is drawn ~2px thick while the scaleX animates (own layer) and snaps to 1px when it settles — the "thick then thin" jump Daci saw. 2px at -4px is the same on every frame. */
+    .nav__index a::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;
       background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .34s cubic-bezier(.22,1,.36,1)}
     .nav__index a:hover::after,.nav__index a:focus-visible::after{transform:scaleX(1)}
     .nav.is-dark .nav__index a{color:#000000;text-shadow:0 1px 5px rgba(255,255,255,.85)}
@@ -354,7 +361,7 @@
     
     <section class="hero" id="stage" aria-label="Selected work">
       
-      <div class="hero__begin" data-begin aria-hidden="true">Scroll to begin<i>&darr;</i></div>
+      <div class="hero__begin" data-begin aria-hidden="true">Scroll to travel<i>&darr;</i></div>
       <div class="hero__wall" id="hero-wall"></div>
       <div class="dz__cam" id="cam" aria-hidden="true"></div>
       
@@ -476,7 +483,7 @@
       <section class="ab-comp ab-led" data-topo="ink" aria-label="The components">
         
         
-        <p class="ab-comp__lead ab-stmt" data-stmt>My portfolio mirrors my own journey &mdash; the <em>key components</em> of my life down to the simple details, and the impact they have had on shaping me as a character, regardless of how unrelated to each other they may seem.</p>
+        <p class="ab-comp__lead ab-stmt" data-stmt>My portfolio mirrors my own journey and the key components of my life, down to the simple details, and the impact they have had on shaping me as a character, regardless of how unrelated to each other they may seem.</p>
 
         <ol class="ab-led__rows">
           <li class="ab-led__row" data-led>
@@ -554,7 +561,7 @@
           
           <video class="gate__vid" muted loop playsinline preload="metadata"
                  poster="assets/img/football-poster.jpg">
-            <source src="assets/video/football.mp4" type="video/mp4">
+            <source src="assets/video/football.mp4" type="video/mp4" media="(min-width: 761px)">
           </video>
         </div>
         
@@ -916,6 +923,7 @@
   <script defer src="assets/js/subs.js"></script>
   
   <script defer src="assets/js/nav.js"></script>
+  <script defer src="assets/js/phonemenu.js"></script>
   
   <script defer src="assets/js/transition.js"></script>
   
