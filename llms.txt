@@ -1,0 +1,27 @@
+# Intrinsicism
+
+> The portfolio of Daci (Dacian) Scurtu, a creative director specialising in web design, based in Valencia, Spain. A scroll-driven, immersive site about creative direction and the shift from pursuing success to understanding purpose. Founded 2026.
+
+The site is a single page at https://daciscurtu.com/ with four sections: Manifesto, Projects, About and Contact.
+
+## About
+- Daci Scurtu is a business student, a footballer and a creative director specialising in web design.
+- Practices: creative direction, brand direction, web design, interactive design. Disciplines: art direction, UX and UI design, motion and interaction, front-end build.
+- Has lived in Spain, England and Australia.
+
+## Projects
+- ONPOINT (2024): his own streetwear accessories label. Brand identity, print, product and film.
+- Forma (2026): a concept website for an architecture and design studio. https://daci-s.github.io/Forma-version-2/
+- Elara & Co (2026): a concept website for a wedding photography and film studio. https://daci-s.github.io/Elara-co/
+- Clerestory (2026): a concept website for a stained-glass studio in York. https://daci-s.github.io/Clerestory/
+- Isochrone (2026): a concept website for a watch manufacture. https://daci-s.github.io/Isochrone/
+- The Descent (2026): a scroll-driven dive to the bottom of the sea.
+
+## Availability
+- Open to internships, freelance projects, mentorship and collaborations with agencies, studios or brands.
+- Works with young and upcoming brands, businesses, athletes, entrepreneurs, models and personalities.
+
+## Contact
+- Email: dacianscurtu29@gmail.com
+- Instagram: https://www.instagram.com/daciscurtu
+- LinkedIn: https://www.linkedin.com/in/dacian-scurtu
